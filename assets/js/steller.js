@@ -31,6 +31,31 @@ $(document).ready(function(){
     });
 });
 
+var API_ENDPOINT = "https://jmn81ebbwb.execute-api.ap-south-1.amazonaws.com/stage1";
+
+// AJAX POST request to save Employee data
+document.getElementById("submit").onclick = function(event){
+	event.preventDefault();
+    var inputData = {
+        "contact": $('#contact-info').val(),
+        "message": $('#message-box').val()
+    };
+    $.ajax({
+        url: API_ENDPOINT,
+        type: 'POST',
+        data:  JSON.stringify(inputData),
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+            document.getElementById("MessageSent").innerHTML = "Message sent sucessfully";
+        },
+        error: function () {
+            alert("Error sending message. Try again or check internet access.");
+        }
+    });
+}
+
+
+
 document.querySelectorAll('.download-resume').forEach(button => {
 	button.addEventListener('click',function () {
 		const resumeURL = this.getAttribute('data-url')
