@@ -8,9 +8,9 @@ sns = boto3.client('sns')
 
 
 # Use the DynamoDB object to select our table
-table = dynamodb.Table('portfolio-messages')
+table = dynamodb.Table('DB-name')
 # sns topic's arn 
-sns_topic_arn = 'arn:aws:sns:your-region:your-account-id:YourTopicName'
+sns_topic_arn = 'SNS-topic-ARN'
 
 # Define the handler function that the Lambda service will use as an entry point
 def lambda_handler(event, context):
