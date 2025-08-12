@@ -1,16 +1,4 @@
-/*!
-=========================================================
-* Steller Landing page
-=========================================================
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // smooth scroll
 $(document).ready(function(){
@@ -31,7 +19,7 @@ $(document).ready(function(){
     });
 });
 
-var API_ENDPOINT = "https://jmn81ebbwb.execute-api.ap-south-1.amazonaws.com/stage1";
+var API_ENDPOINT = "your-api-gateway-endpoint";
 
 // AJAX POST request to save Employee data
 document.getElementById("submit").onclick = function(event){
