@@ -1,5 +1,6 @@
 
 
+
 // smooth scroll
 $(document).ready(function(){
 	$(".nav-link").on('click', function(event) {
