@@ -21,9 +21,23 @@
 	
 	we can see the logs and interpret them.
 
+6. Cloud Front
 
+	Create a distribution, as cloud front is global, not to worry of region.
+	use the s3 web hosting endpoint for origin
+	leave the origin path ( optional ) blank if already setup the s3 web hosting.
+	remember to use the s3 web hosting endpoint not the s3 bucket name as origin.
+	
+	for origin route, use http, as s3 supports only http not https.
 
+	We need to create a certificate CNAME in route r53.
+	Remember that these certificates are to be created in US-EAST-1 ( N. Virginia region only ).
 
+	While creating a certificate, use DNS validation over email verification.
+
+	once the certificate is defined, it will provide the records, add those to the r53 only then the certificate will be validated.
+
+	Once the clod front is defined, head to r53, create a A record with proper website name and use alias to the cloudfront endpoint.
 
 
 
@@ -31,10 +45,9 @@
 
 Testing the api method
 ==================
-[ For this example the values that are noted and sent via post method were, 
+ For this example the values that are noted and sent via post method were, 
 		1. contact
 		2. message
-]
 
 
 	Query strings :  leave blank.
