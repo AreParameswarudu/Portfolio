@@ -54,7 +54,7 @@ Leave the origin path ( optional ) blank if already setup the s3 web hosting.
 > [!NOTE]
 > Remember to use the s3 web hosting endpoint not the s3 bucket name as origin.  
 
-For origin route, use http, as s3 supports only http not https.  
+For **origin route**, use http, as **s3 supports only http** not https.  
 
 We need to create a certificate CNAME in route r53.  
 > [!NOTE]
