@@ -68,7 +68,25 @@ Once the clod front is defined, head to r53, create a A record with proper websi
 
 
 
----------------------------------------------------------------------------------------------------------------------------
+# Reflecting any updates to s3 bucket files
+By default, if we make any changes to the files in s3 bucket, those will be reflected immediately in the application when accessd using s3 static end point.  
 
-Testing the api method
-==================
+But those wont be reflected in the application when accessed using cloud front distribution.
+
+#### Reason:
+Cloud front uses TTL (Time to Live), to store the cache of the contents of files or obejects.  
+Untill the cache time (TTL) is expired, the old content is sreved with cloudfront.
+
+## How to override the old Content
+_Use INVALIDATION option in the cloudfront._
+
+1. Go to cloud front, access the respective distribution.
+
+2. switch to the invalidate option, create invalidation, specify the objects/files path in the bucket to recache or override the old cache.
+
+		EX: /index.html	
+			/assest/img/
+
+3. save.
+
+4. AWS will automatically start the invalidation.
