@@ -66,3 +66,12 @@ For the storing of logs, we can either go with S3 bucket access logs or CloudFro
 CloudFront logs us the most essential details that helps me to know my audience. So I used the CloudFront logs and store them in either another S3 bucket or directly on AWS CloudWatch logs.  
 By stroing the logs, I can use analytics on the logs and can analyze my audiences. For that I went with Athena to query the logs.
 
+# Cost associated
+Well as mentioned even with the free tier account, It still costs me to server the website for real time.  
+So the major services that incur cost were, 
+* AWS Sheild
+* AWS R53, for Domain and SSL certificates
+* API and Lambda function usages
+* SNS and Mail services
+
+All other services has a limit of minimum usage as free, and beyound that usage, I will face the cost and as of now, I havenot crossed the limit, not yet.  
