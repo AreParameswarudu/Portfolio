@@ -70,7 +70,8 @@ By stroing the logs, I can use analytics on the logs and can analyze my audience
 Well as mentioned even with the free tier account, It still costs me to server the website for real time.  
 So the major services that incur cost were, 
 * AWS Sheild
-* AWS R53, for Domain and SSL certificates
+* AWS R53, for Domain
+* AWS Certificate manager for SSL certificates
 * API and Lambda function usages
 * SNS and Mail services
 
